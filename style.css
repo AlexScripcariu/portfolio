@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', serif;
+}
+
+.lang-container {
+  padding: 1rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 0.3rem;
+}
+
+.coding-card {
+  background: linear-gradient(135deg, #4898F4 80%, #2E89F2);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.35em;
+  font-size: 1rem;
+}
+
+.coding-card img {
+  background-color: #2878D4;
+}
+
+.coding-card p {
+  font-weight: 700;
+}
