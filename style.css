@@ -1,18 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Pre-requisites */
+
+/*You may need to change so body has 1rem margin-left not every individual item*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', serif;
+  font-family: 'Poppins', serif;
+}
+
+body {
+  background-color: #06111E;
+}
+
+/* Header */
+
+header {
+  padding: 0.5rem 1rem;
+  color: rgb(251, 253, 255);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+header h1, .page-items nav a  {
+  text-decoration: underline;
+  text-decoration-color: #2E89F200;
+  text-underline-offset: 0.2rem;
+  transition: text-decoration-color 0.2s ease-out;
+}
+
+header h1:hover, .page-items nav a:hover {
+  text-decoration-color: #2E89F2;
+  transition: text-decoration-color 0.2s ease-in;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.page-items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-icon {
+  border: 1px solid white;
+  border-radius: 0.32em;
+}
+
+/* Landing section */
+
+.landing {
+  margin: 1rem;
+  padding-bottom: min(4rem, 5%);
+}
+
+.landing h2 {
+  padding-top: 1.5rem;
+  color: #2EF275;
+  font-size: clamp(1.7rem, 6vw, 4.6rem);
+}
+
+.landing p {
+  color: #4DC779;
+  margin-top: -0.6rem;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+}
+
+/* About me section */
+
+.about-me {
+  background-color: #1D5697;
+  margin: 1rem;
+  border-radius: 0.4em;
+  padding: 1rem;
+  width: max(50%, 16rem);
+  color: #d2dce9;
+} 
+
+.about-me h2 {
+  color: #E5F0FD;
+}
+
+.about-me p {
+  font-family: 'Roboto';
+  line-height: 1.4;
+}
+
+/* Skills section */
+
+.skills {
+  margin: 1rem;
+}
+
+.skills > h2 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* Lang section */
+
+.lang-section { 
+  background-color: #0B223C;
+  border-radius: 0.4em;
+  margin-top: 1.5rem;
+}
+
+.lang-section h2 {
+  color: #E5F0FD;
+  padding: 0.5rem 0.5rem 0;
+  margin: 0.5rem 0.5rem 0;
 }
 
 .lang-container {
   padding: 1rem;
-  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  width: min(80%, 70rem);
   gap: 0.3rem;
 }
+
+/* Coding card styles */
 
 .coding-card {
   background: linear-gradient(135deg, #4898F4 80%, #2E89F2);
@@ -27,10 +141,22 @@
   font-size: 1rem;
 }
 
-.coding-card img {
-  background-color: #2878D4;
+.coding-card i{
+  color: #2367B5;
 }
 
 .coding-card p {
-  font-weight: 700;
+  font-weight: 600;
+  color: rgb(235, 233, 233);
+}
+
+/* other skills */
+.other-skills-section {
+  background-color: #1f70de;
+}
+
+
+.other-skills {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  width: min(80%, 60rem);
 }
