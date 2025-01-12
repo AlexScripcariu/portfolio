@@ -327,6 +327,7 @@ header nav p {
   color: #ffffff;
   transition: color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
+  width: 100%;
 }
 
 .link-button:hover {
@@ -408,6 +409,7 @@ header nav p {
 
 footer {
   padding: 1rem;
+  padding-right: 0.5rem;
   background-color: #050f1a;
   color: #E5F0FD;
   padding-left: 2rem;
@@ -437,4 +439,8 @@ footer {
 
 .links nav a {
   font-size: 0.9rem;
+}
+
+.gmail-text {
+  font-size: clamp(0.8rem, 3vw, 1rem);
 }
