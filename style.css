@@ -3,8 +3,8 @@
 /*You may need to change so body has 1rem margin-left not every individual item*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hatran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 
 * {
   padding: 0;
@@ -20,24 +20,31 @@ body {
 
 header {
   padding: 0.5rem 1rem;
-  color: rgb(251, 253, 255);
+
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  text-decoration: none;
+  flex-wrap: wrap;
+  row-gap: 0.2rem;
 }
                   
 header h1 {
   font-size: clamp(1rem, 4vw, 2rem);
 }
 
-header h1, .page-items nav a  {
+header nav  {
+  font-size: clamp(0.72rem, 1vw, 1rem);
+}
+
+header h1, nav a{
   text-decoration: underline;
   text-decoration-color: #2E89F200;
   text-underline-offset: 0.2rem;
   transition: text-decoration-color 0.2s ease-out;
 }
 
-header h1:hover, .page-items nav a:hover {
+header h1:hover, nav a:hover {
   text-decoration-color: #2E89F2;
   transition: text-decoration-color 0.2s ease-in;
 }
@@ -45,7 +52,16 @@ header h1:hover, .page-items nav a:hover {
 header nav {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 1rem; 
+}
+
+header > a {
+  color: rgb(251, 253, 255);
+  text-decoration: none;
+}
+
+nav a {
+  color: rgb(237, 239, 241);
 }
 
 header nav p {
@@ -95,12 +111,32 @@ header nav p {
   padding: 1rem;
   margin-top: 1.15rem;
   border-radius: 0.4em;
-  width: clamp(16rem, 50vw, 30rem);
+  width: clamp(16rem, 90%, 31rem);
   color: white;
 }
 
 .my-description p {
-  font-family: 'Noto Sans Hatran';
+  line-height: 1.6;
+  font-family: 'Open Sans';
+}
+
+.highlight {
+  background: linear-gradient(45deg,#96EDF8,  #2EDCF2 20%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+.my-description p a {
+  font-family: 'Open Sans';
+  text-decoration: underline;
+  text-decoration-color: #E5F0FD00;
+  text-underline-offset: 0.1rem;
+  transition: text-decoration-color 0.2s ease-in;
+}
+
+.my-description p a:hover {
+  text-decoration-color: #E5F0FD;
+  transition: text-decoration-color 0.2s ease-in;
 }
 
 /* Square pattern design */
@@ -143,10 +179,10 @@ header nav p {
 /* Skills section */
 
 .skills {
-  margin: 1rem;
+  margin: 3rem 1rem;
 }
 
-.skills > h2, .about-me h2 {
+.skills > h2, .about-me h2, .projects > h2, .contact-me > h2 {
   color: white;
   font-size: 1.8rem;
 }
@@ -206,4 +242,199 @@ header nav p {
 .other-skills {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   width: min(80%, 60rem);
+}
+
+/* Projects section */
+
+.projects {
+  margin: 1rem;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+}
+
+.project-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+}
+
+.date-created {
+  font-size: 0.7rem;
+  color: rgb(196, 207, 212);
+  flex-grow: 1;
+}
+
+.project-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  width: min(100%, 65rem);
+  margin: 1rem auto;
+}
+
+/* Project card */
+
+.project-card-wrapper {
+  padding: 2px;
+  background: linear-gradient(135deg, #2e89f2, #5496c9);
+  border-radius: 0.4em;
+}
+
+.project-card {
+  background-color: #071d2e;
+  border-radius: 0.4em;
+  padding: 1rem;
+  color: #ecf6ff;
+}
+
+.project-img {
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+  border-radius: 0.25em;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  height: 9rem;
+}
+
+.project-title {
+  font-weight: 600;
+}
+
+.project-desc {
+  color: #d8e3ec;
+  flex-grow: 1;
+}
+
+.link-button {
+  margin-top: auto;
+  padding: 0.4em 0.8em;
+  border-radius: 2em;
+  border: none;
+  background-color: #2E89F2;
+  background: linear-gradient(90deg, #2E89F2, #4d85c7);
+  color: #ffffff;
+  transition: color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.link-button:hover {
+  background-color: #e3f1fb;
+  transition: color 0.2s ease-in;
+  color: #2E89F2;
+  background: linear-gradient(90deg, #e3f1fb, #e3f1fb);
+  transition: background-color 0.2s ease-in;
+}
+
+/* Contact page */
+
+.contact-me {
+  margin: 3rem 1rem;
+  color: #d9dde2;
+}
+
+.contact-me p {
+  line-height: 1.6;
+  max-width: min(60rem, 95%);
+}
+
+.content-divider {
+  width: 100%;
+  margin: 1.5rem auto;
+  background-color: white;
+  height: 2px;
+}
+
+.social-link-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; 
+  margin: 1.5rem 0;
+}
+
+.social-link-container a {
+  text-decoration: none;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  font-weight: 500;
+  gap: 0.5rem;
+  
+}
+
+.social-link img {
+  height: 1rem;
+}
+
+.social-link p {
+  color: #E5F0FD;
+}
+
+.discord {
+  background-color: #5865F2;
+}
+
+.github {
+  background-color: white;
+  width: 9rem;
+
+}
+
+.github p {
+  color: #06111E;
+}
+
+.gmail {
+  background-color: #c3584f;
+}
+
+/* Footer */
+
+footer {
+  padding: 1rem;
+  background-color: #050f1a;
+  color: #E5F0FD;
+  padding-left: 2rem;
+}
+
+.links-container {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 1rem;
+  gap: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links h3 {
+  font-weight: 400;
+  text-underline-offset: 2px;
+}
+
+.links nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.links nav a {
+  font-size: 0.9rem;
 }

@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <header>
-      <h1>Alex Scripcariu</h1>
+    <header id="header">
+      <a href="#header"><h1>Alex Scripcariu</h1></a>
       <div class="page-items">
         <nav>
-          <a>About me</a>
+          <a href="#about-me">About me</a>
+          <p >•</p>
+          <a href="#skills">Skills</a>
           <p>•</p>
-          <a>Skills</a>
+          <a href="#projects">Projects</a>
           <p>•</p>
-          <a>Projects</a>
-          <p>•</p>
-          <a>Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
     <main>
-      <section class="landing">
+      <section class="landing" id="landing">
         <h2>Determined to code.</h2>
         <p>Writing every line with optimism and insight.</p>
       </section>
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <h2>About me:</h2>
         <article class="my-description">
-          <p>I'm a learning web devloper, who is currently specialising in the front end.
-            My main abilities lie in making user-friendly websites with good UI/UX.
-            The way I combine colours together and lay out the page creates for an
+          <p>I'm a learning web developer, who is currently specialising in the front-end.
+            My main abilities lie in making <span class="highlight">user-friendly websites</span> with <span class="highlight">good UI/UX</span>.
+            The way I combine colours together and lay out items creates for an
             aesthetic page. I have always enjoyed questioning how and why things are
             made and now I get that decision with my code. If you are interested in
-            learning more about me and my skills, please contact me.
+            learning more about me and my skills, please <a>contact me.</a>
           </p>
         </article>
         <div class="square sq-1"></div>
@@ -45,7 +45,7 @@
         <div class="square sq-5"></div>
         <div class="square sq-6"></div>
       </section>
-      <section class="skills">
+      <section class="skills" id="skills">
         <h2>Skills:</h2>
         <section class="lang-section">
           <h2>My Tech Stack: </h2>
@@ -102,6 +102,95 @@
           </div>
         </section>
       </section>
+      <section class="projects" id="projects">
+        <h2>Projects:</h2>
+        <div class="project-container">
+          <div class="project-card-wrapper">
+            <div class="project-card">
+              <img class="project-img" src="./assets/images/green-crafted-ss.png" alt="An image of Green Crafted" />
+              <div class="project-text">
+                <div class="project-info">
+                  <h3 class="project-title">Green Crafted</h3>
+                  <p class="date-created">10th January 2025</p>
+                </div>
+                <p class="project-desc">An eco-friendly furtniture startup.</p>
+                <button class="link-button"><a>View Project ></a></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-wrapper">
+            <div class="project-card">
+              <img class="project-img" src="./assets/images/journali-website.png" alt="An image of Green Crafted" />
+              <div class="project-text">
+                <div class="project-info">
+                  <h3 class="project-title">Journali</h3>
+                  <p class="date-created">2nd January 2025</p>
+                </div>
+                <p class="project-desc">A course-type page meant to utilise grid and flexbox.</p>
+                <button class="link-button"><a>View Project ></a></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-wrapper">
+            <div class="project-card">
+              <img class="project-img" src="./assets/images/first-portfolio.png" alt="An image of Green Crafted" />
+              <div class="project-text">
+                <div class="project-info">
+                  <h3 class="project-title">Portfolio 1</h3>
+                  <p class="date-created">29th December 2024</p>
+                </div>
+                <p class="project-desc">My first project and my first portfolio attempt.</p>
+                <button class="link-button"><a>View Project ></a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-me" id="contact">
+        <h2>Contact me:</h2>
+        <p>Most of the time, I'm either studying or coding. Regardless, if you
+          have any thoughts or questions about me or my code, <span class="highlight">please feel free 
+          to ask.</span> If you want to <span class="highlight">contact me</span>, my links are below: 
+        </p>
+        <div class="social-link-container">
+          <div class="social-link discord">
+            <img src="./assets/svg/discord-mark-white.svg">
+            <p>heyglee</p>
+          </div>
+          <a href="https://github.com/AlexScripcariu" target="_blank">
+            <div class="social-link github">
+              <img src="./assets/svg/github-mark.svg">
+              <p>Alex Scripcariu</p>
+            </div>
+          </a>
+          <div class="social-link gmail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg">
+            <p>alexscripcariu41209</p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>Created by <b>Alex Scripcariu</b> 2025</p>
+        <div class="links-container">
+          <div class="links">
+            <h3><u>Links</u></h3>
+            <nav>
+              <a href="#about-me">About me</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+          <div class="links">
+            <h3><u>Contacts</u></h3>
+            <nav>
+              <a href="https://github.com/AlexScripcariu" target="_blank"><b>GitHub:</b> AlexScripcariu</a>
+              <a><b>Discord:</b> heyglee</a>
+              <a><b>Gmail:</b> alexscripcariu41209</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
